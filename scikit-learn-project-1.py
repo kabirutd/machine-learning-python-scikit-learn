@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[13]:
+# In[24]:
 
 
 import pandas as pd
@@ -11,7 +11,7 @@ import seaborn as sns
 get_ipython().run_line_magic('matplotlib', 'inline')
 
 
-# In[14]:
+# In[25]:
 
 
 # Related to scikit learn, Python machine learning module 
@@ -19,32 +19,35 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 from sklearn import datasets 
 
 
-# In[15]:
+# # Boston Housing Market Data
+# 
+
+# In[26]:
 
 
 bh = datasets.load_boston()
 
 
-# In[16]:
+# In[27]:
 
 
 bh.keys()
 
 
-# In[17]:
+# In[28]:
 
 
 #print(bh.DESCR)
 print(bh['DESCR'])
 
 
-# In[18]:
+# In[29]:
 
 
 bh.feature_names
 
 
-# In[19]:
+# In[30]:
 
 
 df=pd.DataFrame(data=bh.data,columns=bh.feature_names)
@@ -52,30 +55,44 @@ df['price']=bh.target
 df.head()
 
 
-# In[20]:
+# # Breast Cancer Data
+
+# In[31]:
 
 
 bh2 = datasets.load_breast_cancer()
 
 
-# In[21]:
+# In[ ]:
+
+
+
+
+
+# In[32]:
 
 
 bh2.keys()
 
 
-# In[22]:
+# In[33]:
 
 
 bh2.feature_names
 
 
-# In[23]:
+# In[34]:
 
 
 df2=pd.DataFrame(data=bh2.data,columns=bh2.feature_names)
 df2['price']=bh2.target
 df2.head()
+
+
+# In[ ]:
+
+
+
 
 
 # In[ ]:
